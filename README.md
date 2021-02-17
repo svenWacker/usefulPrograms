@@ -3,3 +3,5 @@
 ## numbers.js
 
 ## mathGames.js
+
+## wordGames.js
