@@ -46,3 +46,15 @@ console.log(isSymmetrical(44444444)); // ➞ true
 console.log(isSymmetrical(9939)); // ➞ false
 console.log(isSymmetrical(1112111)); // ➞ true
 console.log();
+
+const average = (...nums) => {
+  let result = 0;
+  for (let i = 0; i < nums.length; i++) {
+    result = +nums[i];
+  }
+  return result / nums.length;
+};
+console.log(average(0)); // ---> 0
+console.log(average(1, 2)); // ---> 1.5
+console.log(average(1, 3, 6, 10)); // ---> 5
+console.log(average(12, 14, 16)); // ---> 14

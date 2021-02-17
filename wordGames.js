@@ -52,6 +52,42 @@ console.log(hackerSpeak("programming is fun"));
 console.log(hackerSpeak("become a coder"));
 console.log();
 
+const hackerSpeak = (str) => {
+  return str
+    .toLowerCase()
+    .split("")
+    .map((chr) => {
+      switch (chr) {
+        case "a":
+          return "4";
+        case "o":
+          return "0";
+        case "e":
+          return "4";
+        case "s":
+          return "4";
+        case "i":
+          return "4";
+        default:
+          return chr;
+      }
+    })
+    .join("");
+};
+console.log(hackerSpeak("javascript is cool"));
+console.log(hackerSpeak("programming is fun"));
+console.log(hackerSpeak("become a coder"));
+console.log();
+
+const hackerSpeak2 = (statement) => {
+  const leet = { a: 4, b: 3, i: 1, o: 0, s: 5 };
+  const speak = (letter) =>
+    leet.hasOwnProperty(letter) ? leet[letter] : letter;
+
+  return statement.split("").map(speak).join("");
+};
+console.log(hackerSpeak2("javascript is cool"));
+
 const pigLatin = (str) => {
   const lowerCase = str.toLowerCase().replaceAll(".", "");
   const splitStr = lowerCase.split(" ");
